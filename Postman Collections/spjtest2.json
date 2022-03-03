@@ -7,20 +7,19 @@
   "item": [
     {
       "name": "SteveTestGetRequest",
-      "_postman_id": "34e74174-60aa-4cc3-9a5d-ce816c915f0a",
+      "id": "34e74174-60aa-4cc3-9a5d-ce816c915f0a",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
       "request": {
         "method": "GET",
-        "header": [],
-        "url": null
+        "header": []
       },
       "response": []
     },
     {
       "name": "SteveTestGetRequest",
-      "_postman_id": "9224e676-58e8-4107-aeb8-0d071ab7b0b3",
+      "id": "9224e676-58e8-4107-aeb8-0d071ab7b0b3",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -31,6 +30,34 @@
         "description": "Test GitHub Pull"
       },
       "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "91941195-aa20-4903-9b61-545ac1446174",
+        "type": "text/javascript",
+        "exec": [
+          "pm.environment.get(\"variable_key\");",
+          "pm.globals.get(\"variable_key\");",
+          "pm.variables.get(\"variable_key\");",
+          "pm.collectionVariables.get(\"variable_key\");",
+          "pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {",
+          "    console.log(response.json());",
+          "});"
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "314fb937-b026-43ac-9dcc-61e2f95d105f",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
     }
   ]
 }
