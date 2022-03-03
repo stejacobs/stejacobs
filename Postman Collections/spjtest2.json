@@ -36,7 +36,7 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "91941195-aa20-4903-9b61-545ac1446174",
+        "id": "b3fdab59-cf4d-4926-aba6-86a15c787af8",
         "type": "text/javascript",
         "exec": [
           "pm.environment.get(\"variable_key\");",
@@ -52,12 +52,26 @@
     {
       "listen": "test",
       "script": {
-        "id": "314fb937-b026-43ac-9dcc-61e2f95d105f",
+        "id": "a6421e58-efc9-41a8-aa89-3cd0d959b1b9",
         "type": "text/javascript",
         "exec": [
           ""
         ]
       }
+    }
+  ],
+  "variable": [
+    {
+      "id": "845746cb-1d84-49b9-8a7a-f8b3b46cf786",
+      "key": "SteveVar1",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "id": "de7cabe8-3137-48ee-bae3-1288fff7a90c",
+      "key": "SteveVar2",
+      "value": "12345",
+      "type": "string"
     }
   ]
 }
