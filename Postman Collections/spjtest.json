@@ -1,0 +1,687 @@
+{
+  "info": {
+    "_postman_id": "3bf025a2-7114-4f74-b96b-9069f98d65bb",
+    "name": "User Service API copy",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "0. OAuth Token & Status",
+      "item": [
+        {
+          "name": "Get Access Token",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "var data = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"accessToken\", data.access_token);"
+                ]
+              }
+            }
+          ],
+          "_postman_id": "ed1e40f8-29ce-4f09-a9d2-f83c78a35a67",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{clientId}}",
+                "password": "{{clientSecret}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic Y2xhdXRoLXVzZXItc2VydmljZTo3S2NRMlFVVUU="
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [],
+              "options": {}
+            },
+            "url": {
+              "raw": "{{getTokenUrl}}?grant_type={{grantType}}",
+              "host": [
+                "{{getTokenUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "grant_type",
+                  "value": "{{grantType}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Validate Token",
+          "_postman_id": "6e7b4bb9-9135-4881-8a3d-57483464fb83",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "basic",
+              "basic": {
+                "username": "{{clientId}}",
+                "password": "{{clientSecret}}",
+                "saveHelperData": true,
+                "showPassword": false
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Basic Y2xhdXRoLXVzZXItc2VydmljZTo3S2NRMlFVVUU="
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "token={{accessToken}}",
+              "options": {}
+            },
+            "url": "{{checkTokenUrl}}"
+          },
+          "response": []
+        },
+        {
+          "name": "HealthCheck",
+          "_postman_id": "d8d809a8-ba41-431d-b0bb-c659e2495890",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{userServiceUrl}}/health"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "3d82267e-851b-42f8-94da-65c0e010a560"
+    },
+    {
+      "name": "1. Organizations",
+      "item": [
+        {
+          "name": "Create Organization",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var randomNumber = (Math.random()*1000).floor();",
+                  "",
+                  "postman.setGlobalVariable(\"randomId\", randomNumber);"
+                ]
+              }
+            }
+          ],
+          "_postman_id": "366543fd-e682-4834-9e06-bf80cd57be4d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\" : \"TestOrganizationXabc{{randomId}}\",\n  \"applicationCode\" : \"CLP\"\n}",
+              "options": {}
+            },
+            "url": "{{userServiceUrl}}/organizations"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Organization By ID",
+          "_postman_id": "796110e0-1f0a-4a4a-bc3f-8e3518383f58",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}"
+              }
+            ],
+            "url": "{{userServiceUrl}}/organizations/1"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Organizations",
+          "_postman_id": "30e3c6c5-010c-4d5b-a8ca-8b91a9103898",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}"
+              }
+            ],
+            "url": "{{userServiceUrl}}/organizations"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Organizations By Application Code",
+          "_postman_id": "70209677-f1f9-4ea8-9d67-137307b7a4c6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{userServiceUrl}}/organizations?applicationCode=CLP",
+              "host": [
+                "{{userServiceUrl}}"
+              ],
+              "path": [
+                "organizations"
+              ],
+              "query": [
+                {
+                  "key": "applicationCode",
+                  "value": "CLP"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "a5ee168c-2bca-4301-aad6-054fdca11e14"
+    },
+    {
+      "name": "2. Users",
+      "item": [
+        {
+          "name": "Get User By ID",
+          "_postman_id": "449cae8c-6575-4e1d-b9ea-3fe73dbb84a5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}"
+              }
+            ],
+            "url": "{{userServiceUrl}}/organizations/1/users/1"
+          },
+          "response": []
+        },
+        {
+          "name": "Get User By Login",
+          "_postman_id": "bc6d3690-5c3c-4047-8de0-0e11c0db791b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{userServiceUrl}}/organizations/1/users/search?login=loginName",
+              "host": [
+                "{{userServiceUrl}}"
+              ],
+              "path": [
+                "organizations",
+                "1",
+                "users",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "login",
+                  "value": "loginName"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create User",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var randomNumber = (Math.random()*1000).floor();",
+                  "",
+                  "postman.setGlobalVariable(\"randomId\", randomNumber);"
+                ]
+              }
+            }
+          ],
+          "_postman_id": "bb113bd1-3a3e-4182-9bc0-31ba46be73f3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Test\",\n  \"lastName\": \"User\",\n  \"username\": \"TestUser2abc{{randomId}}\",\n  \"emailAddress\": \"testabc{{randomId}}@mailinator.com\",\n  \"enabled\": true,\n  \"applicationCode\": \"CLP\",\n  \"applicationName\": \"My Application Name\",\n  \"customCreateUserEmailText\": \"This is a test of the Custom Email Test. Please be advised...there's something happening here....\"\n}",
+              "options": {}
+            },
+            "url": "{{userServiceUrl}}/organizations/1/users"
+          },
+          "response": []
+        },
+        {
+          "name": "Update User",
+          "_postman_id": "240240df-a388-4b71-be0d-f61f9846d8fd",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"updatedFirstName\",\n  \"lastName\": \"updatedLastName\",\n  \"username\": \"testPassAge\",\n  \"emailAddress\": \"newemail{{randomId}}@mailinator.com\",\n  \"enabled\": true\n}",
+              "options": {}
+            },
+            "url": "{{userServiceUrl}}/organizations/2/users/3"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Users",
+          "_postman_id": "e6e6b0c5-c518-4cf1-a4e5-07ef4f26d701",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}"
+              }
+            ],
+            "url": "{{userServiceUrl}}/organizations/1/users/"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Users",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var randomNumber = (Math.random()*1000).floor();",
+                  "",
+                  "postman.setGlobalVariable(\"randomId\", randomNumber);",
+                  "postman.setGlobalVariable(\"nextRandomId\", randomNumber + 1);",
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_id": "129e66a2-7978-4be8-9af0-19a562e37a65",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"applicationCode\": \"CLP\",\n  \"applicationName\": \"Application Name\",\n    \"users\": [\n        {\n            \"firstName\": \"BulkUser1\",\n            \"lastName\": \"Smith\",\n            \"username\": \"BulkUserxabcz{{randomId}}\",\n            \"enabled\": true\n        },\n        {\n            \"firstName\": \"BulkUser2\",\n            \"lastName\": \"Smith\",\n            \"username\": \"BulkUserxbacz{{nextRandomId}}\",\n            \"emailAddress\": \"BulkUserxbacder191@example.com\",\n            \"enabled\": true\n        }\n    ]\n}",
+              "options": {}
+            },
+            "url": "{{userServiceUrl}}/organizations/1/users/batch"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Users By Application Code",
+          "_postman_id": "d7e042e5-9182-4bd3-8cfc-ae76e499b9b6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{userServiceUrl}}/organizations/1/users?applicationCode=CLP",
+              "host": [
+                "{{userServiceUrl}}"
+              ],
+              "path": [
+                "organizations",
+                "1",
+                "users"
+              ],
+              "query": [
+                {
+                  "key": "applicationCode",
+                  "value": "CLP"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "a4f7da0f-9876-4b17-b065-743e7759f955"
+    },
+    {
+      "name": "3. Passwords",
+      "item": [
+        {
+          "name": "Get Reset Token",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "postman.setEnvironmentVariable(\"resetToken\", \"\\\"\" + responseBody + \"\\\"\");"
+                ]
+              }
+            }
+          ],
+          "_postman_id": "a614383d-02a9-4733-ade8-1d12ed69d5e7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"emailAddress\":\"totallyValid@mailinator.com\"}",
+              "options": {}
+            },
+            "url": "{{userServiceUrl}}/getResetToken"
+          },
+          "response": []
+        },
+        {
+          "name": "Validate Password",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_id": "b2e34fdb-6086-4610-9956-18152c359baa",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\":\"testPassAge\",\n  \"password\": \"password1234\"\n}",
+              "options": {}
+            },
+            "url": "{{userServiceUrl}}/users/validatePassword"
+          },
+          "response": []
+        },
+        {
+          "name": "Set Password",
+          "_postman_id": "0ae4a032-c34e-462b-b6d3-0cbdfde3f128",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"password\": \"insertPasswordHere\",\n  \"token\": \"insertTokenHere\"\n}",
+              "options": {}
+            },
+            "url": "{{userServiceUrl}}/users/setPassword"
+          },
+          "response": []
+        },
+        {
+          "name": "Check Password Complexity",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
+          "_postman_id": "96708a33-e39b-407f-98b3-12858e5f988f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"token\":\"dd2bc488-e622-4740-9fc2-96ecccec0580\",\n  \"password\": \"P@ssw0rd\"\n}",
+              "options": {}
+            },
+            "url": "{{userServiceUrl}}/users/checkPasswordComplexity"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "a85dc564-b234-4b9e-9d57-4dc0f0cf41bd"
+    },
+    {
+      "name": "4. Identity Providers",
+      "item": [
+        {
+          "name": "Get IDP Information for a User",
+          "_postman_id": "fe64adbd-1fd6-4f99-aa1a-51ed971d7a44",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{userServiceUrl}}/idps?userLogin=loginName",
+              "host": [
+                "{{userServiceUrl}}"
+              ],
+              "path": [
+                "idps"
+              ],
+              "query": [
+                {
+                  "key": "userLogin",
+                  "value": "loginName"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "946a40c1-f0b1-43af-8707-85eb0651fc69"
+    },
+    {
+      "name": "5. Search",
+      "item": [
+        {
+          "name": "Search for User",
+          "_postman_id": "388e822a-ba16-42f3-a7a7-7555a680637e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{userServiceUrl}}/autocomplete?input=loginName&applicationCode=CLP",
+              "host": [
+                "{{userServiceUrl}}"
+              ],
+              "path": [
+                "autocomplete"
+              ],
+              "query": [
+                {
+                  "key": "input",
+                  "value": "loginName"
+                },
+                {
+                  "key": "applicationCode",
+                  "value": "CLP"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "0c51f9f7-efd3-4bd7-b06d-51e9e78d9e8c"
+    }
+  ]
+}
