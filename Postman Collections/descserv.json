@@ -95,7 +95,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{ \r\n\r\n\"Alias\": {{archive-alias}}, \r\n\r\n\"ViewingMode\": \"RAW\", \r\n\r\n\"AsPdf\": false \r\n\r\n} "
+              "raw": "{ \r\n\r\n\"Alias\": {{archive-alias}},\r\n\r\n\"ViewingMode\": \"RAW\", \r\n\r\n\"AsPdf\": false \r\n\r\n} "
             },
             "url": "{{Gateway-Url}}/api/GaarReport"
           },
@@ -402,7 +402,7 @@
   ],
   "variable": [
     {
-      "id": "4b258f44-13f3-4b1c-95c1-91d562566fb5",
+      "id": "b2bb6798-cddd-40ce-bffd-8c5e78aac858",
       "key": "archive-alias",
       "value": "\"318246f2-c334-4efc-bb6e-6c8d1dc9edd7\""
     }
