@@ -377,5 +377,34 @@
       ],
       "id": "dfe76688-5ff2-4f73-8d43-9e2974d4e0e1"
     }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "6cf1fb1d-c9f5-4ee0-82c8-cfac8802a8b8",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "05b7c6a6-5486-4698-a504-710eea88e8d8",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "34580f35-d62f-4ac4-8c25-9c2b3fd0a279",
+      "key": "archive-alias",
+      "value": "318246f2-c334-4efc-bb6e-6c8d1dc9edd7"
+    }
   ]
 }
