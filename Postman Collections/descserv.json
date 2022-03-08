@@ -382,7 +382,7 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "6cf1fb1d-c9f5-4ee0-82c8-cfac8802a8b8",
+        "id": "ace18683-021a-42ab-8b86-3498536bb3a4",
         "type": "text/javascript",
         "exec": [
           ""
@@ -392,7 +392,7 @@
     {
       "listen": "test",
       "script": {
-        "id": "05b7c6a6-5486-4698-a504-710eea88e8d8",
+        "id": "9beedd6b-ef07-4316-962d-1c1b8c85a29f",
         "type": "text/javascript",
         "exec": [
           ""
@@ -402,9 +402,9 @@
   ],
   "variable": [
     {
-      "id": "34580f35-d62f-4ac4-8c25-9c2b3fd0a279",
+      "id": "4b258f44-13f3-4b1c-95c1-91d562566fb5",
       "key": "archive-alias",
-      "value": "318246f2-c334-4efc-bb6e-6c8d1dc9edd7"
+      "value": "\"318246f2-c334-4efc-bb6e-6c8d1dc9edd7\""
     }
   ]
 }
