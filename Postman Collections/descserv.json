@@ -10,6 +10,20 @@
       "item": [
         {
           "name": "{{Gateway-Url}}/api/Gaar",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "f76f4423-9877-4ead-adcf-785adc7afb10",
+                "exec": [
+                  "pm.test(\"Successful POST request\", function () {\r",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "id": "acbec703-a66b-45ea-af41-8fa7e8066084",
           "protocolProfileBehavior": {
             "disabledSystemHeaders": {},
@@ -402,7 +416,7 @@
   ],
   "variable": [
     {
-      "id": "4d8a48d3-4c16-45df-b036-c8952e2ebd7f",
+      "id": "babad474-f95d-4c3a-9c5d-bdd949243c12",
       "key": "archive-alias",
       "value": "\"318246f2-c334-4efc-bb6e-6c8d1dc9edd7\""
     }
