@@ -164,6 +164,20 @@
         },
         {
           "name": "{{Gateway-Url}}/api/gatr/documents",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "1d06c6e1-f633-4d74-a3bb-3f1a1f44e015",
+                "exec": [
+                  "pm.test(\"Successful POST request\", function () {\r",
+                  "    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "id": "fae8410e-5619-4912-b867-b1d9bab34013",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -416,7 +430,7 @@
   ],
   "variable": [
     {
-      "id": "babad474-f95d-4c3a-9c5d-bdd949243c12",
+      "id": "15dc19fe-cf8d-4ac7-8369-1f919cf0625c",
       "key": "archive-alias",
       "value": "\"318246f2-c334-4efc-bb6e-6c8d1dc9edd7\""
     }
