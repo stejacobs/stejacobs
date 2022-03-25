@@ -373,31 +373,7 @@
             },
             "url": "{{Gatr-Url}}/api/gatr/documents"
           },
-          "response": [
-            {
-              "id": "0ac6f05d-2fed-4101-9dc2-443713dff711",
-              "name": "{{Gatr-Url}}/api/gatr/documents2",
-              "originalRequest": {
-                "method": "POST",
-                "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n    \"correlationID\": \"f4744eef-74b8-4b16-b09a-5097db6f305f\",\r\n    \"clientID\": \"CHQDwain\",\r\n    \"orderID\": \"20190107-0118-1\",\r\n    \"fileID\": \"g5744eef-74b8-4b16-b09a-5097db6f305f\",\r\n    \"documentServices\": \"<SERVICES xmlns=\\\"http://www.mismo.org/residential/2009/schemas\\\" xmlns:xlink=\\\"http://www.w3.org/1999/xlink\\\" xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\" xsi:schemaLocation=\\\"http://www.mismo.org/residential/2009/schemas TitleData_Mismo.xsd\\\">\\r\\n <SERVICE>\\r\\n <TITLE>\\r\\n <TITLE_RESPONSE>\\r\\n <TITLE_PRODUCTS>\\r\\n <TITLE_PRODUCT SequenceNumber=\\\"1\\\">\\r\\n <EXTENSION>\\r\\n <OTHER>\\r\\n <TITLE_DOCUMENT>\\r\\n <PROPOSED_DECLARATIONS>\\r\\n <PROPOSED_DECLARATION SequenceNumber=\\\"1\\\">\\r\\n <ProposedCoverageAmount>253272.00</ProposedCoverageAmount>\\r\\n </PROPOSED_DECLARATION>\\r\\n </PROPOSED_DECLARATIONS>\\r\\n </TITLE_DOCUMENT>\\r\\n <LIENS>\\r\\n <LIEN SequenceNumber=\\\"1\\\">\\r\\n <LienDescription>FirstPositionMortgageLien</LienDescription>\\r\\n <LienRegisteredDate>2007-06-29Z</LienRegisteredDate>\\r\\n <LienRecordIdentifier xsi:nil=\\\"true\\\" />\\r\\n <LienType>FirstPositionMortgageLien</LienType>\\r\\n <LienIssuedDate>2007-06-19Z</LienIssuedDate>\\r\\n <LienHolderText>J P MORGAN CHASE BANK</LienHolderText>\\r\\n <LienLiablePartyText>WEIS JAMES T, WEIS LISA M</LienLiablePartyText>\\r\\n </LIEN>\\r\\n <LIEN SequenceNumber=\\\"2\\\">\\r\\n <LienDescription>SecondPositionMortgageLien</LienDescription>\\r\\n <LienRegisteredDate>2016-06-02Z</LienRegisteredDate>\\r\\n <LienRecordIdentifier>2016.56616</LienRecordIdentifier>\\r\\n <LienType>SecondPositionMortgageLien</LienType>\\r\\n <LienIssuedDate>2016-05-25Z</LienIssuedDate>\\r\\n <LienHolderText>JP MORGAN CHASE BK NA</LienHolderText>\\r\\n <LienLiablePartyText>WEIS JAMES T, WEIS LISA M</LienLiablePartyText>\\r\\n </LIEN>\\r\\n <LIEN SequenceNumber=\\\"3\\\">\\r\\n <LienDescription>SecondPositionMortgageLien</LienDescription>\\r\\n <LienRegisteredDate>2007-06-29Z</LienRegisteredDate>\\r\\n <LienRecordIdentifier xsi:nil=\\\"true\\\" />\\r\\n <LienType>SecondPositionMortgageLien</LienType>\\r\\n <LienIssuedDate>2007-06-19Z</LienIssuedDate>\\r\\n <LienHolderText>J P MORGAN CHASE BANK</LienHolderText>\\r\\n <LienLiablePartyText>WEIS JAMES T, WEIS LISA M</LienLiablePartyText>\\r\\n </LIEN>\\r\\n </LIENS>\\r\\n <DEEDS>\\r\\n <DEED SequenceNumber=\\\"1\\\">\\r\\n <DeedSignedDate>2003-11-05Z</DeedSignedDate>\\r\\n <DeedRegisteredDate>2003-11-12Z</DeedRegisteredDate>\\r\\n <DeedRecordIdentifier xsi:nil=\\\"true\\\" />\\r\\n <DeedType>Other</DeedType>\\r\\n <DeedGrantorText>WAYNE W SCHUMACHER &amp; CINDY J SCHUMACHER</DeedGrantorText>\\r\\n <DeedGranteeText>JAMES T WEIS &amp; LISA M WEIS and LISA M WEIS</DeedGranteeText>\\r\\n </DEED>\\r\\n </DEEDS>\\r\\n <ACH>\\r\\n <ACH_ABARoutingAndTransitIdentifier>104002894</ACH_ABARoutingAndTransitIdentifier>\\r\\n <ACHBankAccountIdentifier>9300287966</ACHBankAccountIdentifier>\\r\\n </ACH>\\r\\n </OTHER>\\r\\n </EXTENSION>\\r\\n </TITLE_PRODUCT>\\r\\n </TITLE_PRODUCTS>\\r\\n <EXTENSION>\\r\\n <OTHER>\\r\\n <PROPERTY>\\r\\n <ADDRESS>\\r\\n <AddressLineText>10700 VERSAILLES BLVD</AddressLineText>\\r\\n <CityName>Clermont</CityName>\\r\\n <CountyCode>12069</CountyCode>\\r\\n <CountyName>Lake</CountyName>\\r\\n <PostalCode>34711</PostalCode>\\r\\n <StateCode>FL</StateCode>\\r\\n <StreetName>VERSAILLES BLVD</StreetName>\\r\\n <StreetPreDirectionalText xsi:nil=\\\"true\\\" />\\r\\n <StreetPrimaryNumberText>10700</StreetPrimaryNumberText>\\r\\n <StreetSuffixText xsi:nil=\\\"true\\\" />\\r\\n </ADDRESS>\\r\\n <ENCUMBRANCES>\\r\\n <ENCUMBRANCE SequenceNumber=\\\"1\\\">\\r\\n <EXTENSION>\\r\\n <OTHER>\\r\\n <ESTATE>\\r\\n <ESTATE_DETAIL>\\r\\n <PropertyEstateType>FeeSimple</PropertyEstateType>\\r\\n </ESTATE_DETAIL>\\r\\n </ESTATE>\\r\\n </OTHER>\\r\\n </EXTENSION>\\r\\n </ENCUMBRANCE>\\r\\n </ENCUMBRANCES>\\r\\n <LEGAL_DESCRIPTIONS>\\r\\n <LEGAL_DESCRIPTION SequenceNumber=\\\"1\\\">\\r\\n <PARCEL_IDENTIFICATIONS>\\r\\n <PARCEL_IDENTIFICATION SequenceNumber=\\\"1\\\" xlink:label=\\\"APN-1\\\">\\r\\n <ParcelIdentificationType>TaxParcelIdentifier</ParcelIdentificationType>\\r\\n <ParcelIdentifier>01-23-25-063000012000</ParcelIdentifier>\\r\\n </PARCEL_IDENTIFICATION>\\r\\n </PARCEL_IDENTIFICATIONS>\\r\\n <UNPARSED_LEGAL_DESCRIPTIONS>\\r\\n <UNPARSED_LEGAL_DESCRIPTION SequenceNumber=\\\"1\\\">\\r\\n <UnparsedLegalDescription>LOT 120, MONTCLAIR, PHASE II, ACCORDING TO THE PLAT THEREOF AS RECORDED\\r\\nIN PLAT BOOK 39, PAGES 1, 2, AND 3, PUBLIC RECORDS OF LAKE COUNTY, FLORIDA.</UnparsedLegalDescription>\\r\\n </UNPARSED_LEGAL_DESCRIPTION>\\r\\n </UNPARSED_LEGAL_DESCRIPTIONS>\\r\\n </LEGAL_DESCRIPTION>\\r\\n </LEGAL_DESCRIPTIONS>\\r\\n <PROPERTY_DETAIL>\\r\\n <LandUseType>Residential</LandUseType>\\r\\n <EXTENSION>\\r\\n <OTHER>\\r\\n <ResidentialPropertyType>SFRD</ResidentialPropertyType>\\r\\n </OTHER>\\r\\n </EXTENSION>\\r\\n </PROPERTY_DETAIL>\\r\\n </PROPERTY>\\r\\n </OTHER>\\r\\n </EXTENSION>\\r\\n </TITLE_RESPONSE>\\r\\n </TITLE>\\r\\n </SERVICE>\\r\\n</SERVICES>\",\r\n    \"sourceData\": {\r\n        \"loanNumber\": \"010720191\",\r\n        \"clipID\": {{clipID}},\r\n        \"streetNumber\": \"1214\",\r\n        \"street\": \"OFFICE PARK\",\r\n        \"unitNumber\": \"\",\r\n        \"blockNum\": \"\",\r\n        \"prefix\": \"\",\r\n        \"suffix\": \"DR\",\r\n        \"city\": \"OXFORD\",\r\n        \"state\": \"MS\",\r\n        \"county\": \"LAFAYETTE\",\r\n        \"zipCode\": \"38655 \",\r\n        \"borrower\": \"Lisa Mandell\",\r\n        \"loanAmount\": 250000.0000,\r\n        \"closingDate\": \"2022-01-25T14:43:03\",\r\n        \"address\": \"1214 Office Park Dr, Oxford, MS 38655\"\r\n    },\r\n    \"sdpData\": {\r\n        \"clipID\": {{clipID}},\r\n        \"taxAssessment\": {\r\n            \"messages\": [\r\n                {\r\n                \"message\": \"string\",\r\n                \"messageType\": \"info\"\r\n                }\r\n            ],\r\n            \"taxAssessments\": [\r\n                {\r\n                    \"clip\": {{clipID}},\r\n                    \"taxDeliquentYear\": 222\r\n                }\r\n            ]        \r\n        }\r\n    }\r\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
-                "url": "{{Gatr-Url}}/api/gatr/documents"
-              },
-              "_postman_previewlanguage": null,
-              "header": null,
-              "cookie": [],
-              "responseTime": null,
-              "body": null
-            }
-          ]
+          "response": []
         }
       ],
       "id": "dfe76688-5ff2-4f73-8d43-9e2974d4e0e1"
@@ -427,12 +403,12 @@
   ],
   "variable": [
     {
-      "id": "576db1fd-a4cb-4a4f-8c53-8eb0c5103712",
+      "id": "0cb961f9-8e7f-4c9a-9b8c-101b796a17f9",
       "key": "archive-alias",
       "value": "\"318246f2-c334-4efc-bb6e-6c8d1dc9edd7\""
     },
     {
-      "id": "b57ffddf-6c70-41b2-bd14-e1a2113269d5",
+      "id": "c34c6c71-f65c-4db2-8b2f-76b9f144e1ca",
       "key": "clipID",
       "value": "\"2600551334\""
     }
