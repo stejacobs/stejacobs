@@ -383,7 +383,7 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "ace18683-021a-42ab-8b86-3498536bb3a4",
+        "id": "5063ef36-45a6-4284-8f39-4dac14d4ec88",
         "type": "text/javascript",
         "exec": [
           ""
@@ -393,7 +393,7 @@
     {
       "listen": "test",
       "script": {
-        "id": "9beedd6b-ef07-4316-962d-1c1b8c85a29f",
+        "id": "9a49e479-644c-4dac-97b3-962f431ac914",
         "type": "text/javascript",
         "exec": [
           ""
@@ -403,9 +403,14 @@
   ],
   "variable": [
     {
-      "id": "22f8e150-e5b3-4b7e-9317-a6b4014ea108",
+      "id": "88d44d26-c2c2-4063-8679-fb6b4d4b431f",
       "key": "archive-alias",
       "value": "\"318246f2-c334-4efc-bb6e-6c8d1dc9edd7\""
+    },
+    {
+      "id": "75b6223b-33f4-4a57-b4f8-d6d25d6fea2a",
+      "key": "clipID",
+      "value": "\"2600551334\""
     }
   ]
 }
