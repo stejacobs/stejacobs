@@ -286,7 +286,40 @@
           },
           "request": {
             "method": "GET",
-            "header": []
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{Gateway-Url}}/api/gatr/documents/request/json?clientID=CHQDwain&orderID=20190107-0118-2&fileID=g5744eef-74b8-4b16-b09a-5097db6f305f",
+              "host": [
+                "{{Gateway-Url}}"
+              ],
+              "path": [
+                "api",
+                "gatr",
+                "documents",
+                "request",
+                "json"
+              ],
+              "query": [
+                {
+                  "key": "clientID",
+                  "value": "CHQDwain"
+                },
+                {
+                  "key": "orderID",
+                  "value": "20190107-0118-2"
+                },
+                {
+                  "key": "fileID",
+                  "value": "g5744eef-74b8-4b16-b09a-5097db6f305f"
+                }
+              ]
+            }
           },
           "response": []
         }
@@ -458,12 +491,12 @@
   ],
   "variable": [
     {
-      "id": "9878e267-7bd4-4a78-9c12-482a3f58c0dc",
+      "id": "7590c3c2-2451-477c-8141-ac0f9ff951ae",
       "key": "archive-alias",
       "value": "\"318246f2-c334-4efc-bb6e-6c8d1dc9edd7\""
     },
     {
-      "id": "db4832ae-840b-444f-81cb-a74474d0853b",
+      "id": "49487de1-5cd3-4255-b9e5-b0b0dc177912",
       "key": "clipID",
       "value": "\"2600551334\""
     }
