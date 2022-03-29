@@ -277,6 +277,18 @@
             }
           },
           "response": []
+        },
+        {
+          "name": "New Request",
+          "id": "5d54bcd1-c29a-4c7b-871f-59ea16f8bfd0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
         }
       ],
       "id": "c0d19b47-fafa-4d82-b993-d0f2894a8dfa"
@@ -446,12 +458,12 @@
   ],
   "variable": [
     {
-      "id": "a6e7a16c-4815-4114-9757-6cff4c5039b2",
+      "id": "8e5ea8d5-be7b-43af-ba6f-b41f62a9c509",
       "key": "archive-alias",
       "value": "\"318246f2-c334-4efc-bb6e-6c8d1dc9edd7\""
     },
     {
-      "id": "ef11e946-bd64-41db-ac55-320cacbf85aa",
+      "id": "6e7f2ba0-8327-4aff-afa7-f56a3e75ee71",
       "key": "clipID",
       "value": "\"2600551334\""
     }
