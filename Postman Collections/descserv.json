@@ -9,7 +9,7 @@
       "name": "Gateway",
       "item": [
         {
-          "name": "{{Gateway-Url}}/api/Gaar",
+          "name": "GAAR Result",
           "event": [
             {
               "listen": "test",
@@ -491,12 +491,12 @@
   ],
   "variable": [
     {
-      "id": "cbf5d2b3-61a7-4268-898d-0fca1e2f9dfa",
+      "id": "bdad9fad-bfa9-4e16-b69a-6e0575b59f40",
       "key": "archive-alias",
       "value": "\"318246f2-c334-4efc-bb6e-6c8d1dc9edd7\""
     },
     {
-      "id": "c6ce24de-c4b6-4c5f-bb39-7c9f27c185fb",
+      "id": "7dc17555-f941-4108-afc4-6f69d9e228bb",
       "key": "clipID",
       "value": "\"2600551334\""
     }
