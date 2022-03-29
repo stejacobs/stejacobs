@@ -60,7 +60,7 @@
           "response": []
         },
         {
-          "name": "{{Gateway-Url}}/api/GaarReport",
+          "name": "GAAR Report",
           "event": [
             {
               "listen": "test",
@@ -491,12 +491,12 @@
   ],
   "variable": [
     {
-      "id": "f7c7d93b-7e7a-4164-b3fc-cc5eda2a9963",
+      "id": "cbf5d2b3-61a7-4268-898d-0fca1e2f9dfa",
       "key": "archive-alias",
       "value": "\"318246f2-c334-4efc-bb6e-6c8d1dc9edd7\""
     },
     {
-      "id": "c7eabe83-4046-46c8-b866-f95593b8be9f",
+      "id": "c6ce24de-c4b6-4c5f-bb39-7c9f27c185fb",
       "key": "clipID",
       "value": "\"2600551334\""
     }
