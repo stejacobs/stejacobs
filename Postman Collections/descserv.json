@@ -249,7 +249,7 @@
               }
             ],
             "url": {
-              "raw": "{{Gateway-Url}}/api/gatr/documents/report/html?clientID=CHQDwain&orderID=20190107-0118-2&fileID=g5744eef-74b8-4b16-b09a-5097db6f305f",
+              "raw": "{{Gateway-Url}}/api/gatr/documents/report/html?clientID=cHQDwain&orderID=20190107-0118-20&fileID=g5744eef-74b8-4b16-b09a-5097db6f305f",
               "host": [
                 "{{Gateway-Url}}"
               ],
@@ -263,11 +263,11 @@
               "query": [
                 {
                   "key": "clientID",
-                  "value": "CHQDwain"
+                  "value": "cHQDwain"
                 },
                 {
                   "key": "orderID",
-                  "value": "20190107-0118-2"
+                  "value": "20190107-0118-20"
                 },
                 {
                   "key": "fileID",
@@ -491,12 +491,12 @@
   ],
   "variable": [
     {
-      "id": "33b8abad-da93-4781-9f95-0b5475f9d6ed",
+      "id": "0505fe57-3fb6-4642-a1f3-c7f2e984fffd",
       "key": "archive-alias",
       "value": "\"318246f2-c334-4efc-bb6e-6c8d1dc9edd7\""
     },
     {
-      "id": "42cd6fd1-4dd3-4391-ad83-908cbbce17fa",
+      "id": "8a841a35-407a-43a8-87ce-5f73f9a52f1b",
       "key": "clipID",
       "value": "\"2600551334\""
     }
