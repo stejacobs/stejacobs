@@ -116,7 +116,7 @@
           "response": []
         },
         {
-          "name": "{{Gateway-Url}}/api/gatr/documents",
+          "name": "GATR Result",
           "event": [
             {
               "listen": "test",
@@ -491,12 +491,12 @@
   ],
   "variable": [
     {
-      "id": "889ed589-85ad-4efd-b594-68350b2c8845",
+      "id": "7567ea86-c33c-4913-a872-a513cf85661d",
       "key": "archive-alias",
       "value": "\"318246f2-c334-4efc-bb6e-6c8d1dc9edd7\""
     },
     {
-      "id": "b5cbca40-7915-439c-b882-090b1fe913d5",
+      "id": "5d87f7e7-09d1-419d-9c29-e829c2c13529",
       "key": "clipID",
       "value": "\"2600551334\""
     }
