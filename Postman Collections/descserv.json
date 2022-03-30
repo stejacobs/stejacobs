@@ -462,6 +462,18 @@
               "body": "{\n    \"rules\": [\n        {\n            \"id\": 1,\n            \"name\": \"Missing Order Loan Number\",\n            \"status\": \"Passed\",\n            \"message\": null\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Missing Title Document Loan Number\",\n            \"status\": \"Fired\",\n            \"message\": \"Loan Number from title document is not populated.\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Loan Number Comparison\",\n            \"status\": \"Skipped\",\n            \"message\": null\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Missing Order Loan Amount\",\n            \"status\": \"Passed\",\n            \"message\": null\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Missing Title Policy Amount\",\n            \"status\": \"Passed\",\n            \"message\": null\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Policy Amount less than Loan Amount\",\n            \"status\": \"Passed\",\n            \"message\": null\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Missing Order Policy Effective Date\",\n            \"status\": \"Passed\",\n            \"message\": null\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Missing Policy Effective Date\",\n            \"status\": \"Fired\",\n            \"message\": \"Policy Effective Date is not populated\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Title Policy Effective Date after Closing Date\",\n            \"status\": \"Skipped\",\n            \"message\": null\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Invalid Title Policy Effective Date\",\n            \"status\": \"Skipped\",\n            \"message\": null\n        },\n        {\n            \"id\": 11,\n            \"name\": \"Property PUD Check\",\n            \"status\": \"Passed\",\n            \"message\": null\n        },\n        {\n            \"id\": 12,\n            \"name\": \"State Specific Law Check\",\n            \"status\": \"Passed\",\n            \"message\": null\n        },\n        {\n            \"id\": 13,\n            \"name\": \"Current Lien Check\",\n            \"status\": \"Fired\",\n            \"message\": \"Property has 3 current liens.\"\n        },\n        {\n            \"id\": 14,\n            \"name\": \"Private Servitude Check\",\n            \"status\": \"Passed\",\n            \"message\": null\n        },\n        {\n            \"id\": 15,\n            \"name\": \"Delinquent Tax Record Check\",\n            \"status\": \"Passed\",\n            \"message\": null\n        },\n        {\n            \"id\": 28,\n            \"name\": \"Missing SDP Tax Assessment\",\n            \"status\": \"Passed\",\n            \"message\": null\n        },\n        {\n            \"id\": 29,\n            \"name\": \"SDP Delinquent Tax Record Check\",\n            \"status\": \"Fired\",\n            \"message\": \"SDP Tax Assessment has delinquent tax year 222.\"\n        },\n        {\n            \"id\": 16,\n            \"name\": \"Multiple Parcel Check\",\n            \"status\": \"Passed\",\n            \"message\": null\n        },\n        {\n            \"id\": 17,\n            \"name\": \"Property held in a TRUST\",\n            \"status\": \"Passed\",\n            \"message\": null\n        },\n        {\n            \"id\": 18,\n            \"name\": \"Property held in a LLC\",\n            \"status\": \"Passed\",\n            \"message\": null\n        },\n        {\n            \"id\": 19,\n            \"name\": \"Property Selling to TRUST\",\n            \"status\": \"Passed\",\n            \"message\": null\n        },\n        {\n            \"id\": 20,\n            \"name\": \"Property Selling to LLC\",\n            \"status\": \"Passed\",\n            \"message\": null\n        },\n        {\n            \"id\": 21,\n            \"name\": \"Multiple County Check\",\n            \"status\": \"Passed\",\n            \"message\": null\n        },\n        {\n            \"id\": 22,\n            \"name\": \"Missing Proposed Holder Description\",\n            \"status\": \"Fired\",\n            \"message\": \"Missing Proposed Holder Description\"\n        },\n        {\n            \"id\": 23,\n            \"name\": \"Missing Order Lender Name\",\n            \"status\": \"Fired\",\n            \"message\": \"Order Lender Name is not populated\"\n        },\n        {\n            \"id\": 24,\n            \"name\": \"Lender Name Comparison\",\n            \"status\": \"Skipped\",\n            \"message\": null\n        },\n        {\n            \"id\": 25,\n            \"name\": \"Missing Order CLIP ID\",\n            \"status\": \"Passed\",\n            \"message\": null\n        },\n        {\n            \"id\": 26,\n            \"name\": \"Missing SDP CLIP ID\",\n            \"status\": \"Passed\",\n            \"message\": null\n        },\n        {\n            \"id\": 27,\n            \"name\": \"CLIP ID Comparison\",\n            \"status\": \"Passed\",\n            \"message\": null\n        }\n    ],\n    \"processedUtc\": \"2022-03-25T18:16:26.634414Z\",\n    \"totalRules\": 29,\n    \"totalRulesSkipped\": 4,\n    \"totalRulesFired\": 6,\n    \"clientID\": \"CHQDwain\",\n    \"orderID\": \"20190107-0118-1\",\n    \"correlationID\": \"f4744eef-74b8-4b16-b09a-5097db6f305f\",\n    \"fileID\": \"g5744eef-74b8-4b16-b09a-5097db6f305f\",\n    \"engineHost\": \"https://gatr-service-dev.apps.pcfusw1dev.solutions.corelogic.com\",\n    \"address\": \"1214 Office Park Dr, Oxford, MS 38655\"\n}"
             }
           ]
+        },
+        {
+          "name": "New Request",
+          "id": "39c8dab6-f0ff-4c20-bf93-42150fb59964",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
         }
       ],
       "id": "dfe76688-5ff2-4f73-8d43-9e2974d4e0e1"
@@ -491,12 +503,12 @@
   ],
   "variable": [
     {
-      "id": "2a6542ea-3444-4a44-b4e0-bc0b5d6ae83d",
+      "id": "a4c6d300-2e5d-48f6-8aa3-4f87308eaa55",
       "key": "archive-alias",
       "value": "\"318246f2-c334-4efc-bb6e-6c8d1dc9edd7\""
     },
     {
-      "id": "a6a227de-fecb-4a75-a8f0-f606ab5a6481",
+      "id": "9a99d87c-91dd-4ac1-9f3e-3610929953ef",
       "key": "clipID",
       "value": "\"2600551334\""
     }
